@@ -43,10 +43,6 @@ class Solution:
         if sorted_nums[largest_num_index][1] > max_value or sorted_nums[smallest_num_index][1] < min_value:
             raise ConstraintError
 
-        # iterate through list until the largest number is less than the target
-        while sorted_nums[largest_num_index][1] > target:
-            largest_num_index -= 1
-
         # sum the largest and smallest number. If the sum is greater than the target, decriment the large variable
         # if the sum is lesser than the target, decriment the small  variable
         total: int = sorted_nums[largest_num_index][1] + \
