@@ -17,21 +17,21 @@ class TestSolution(unittest.TestCase):
         Input: nums = [2,7,11,15], target = 9 Output: [0,1]
         """
         s = Solution()
-        self.assertTrue(s.twoSum([2, 7, 11, 15], 9).sort() == [0, 1])
+        self.assertTrue(sorted(s.twoSum([2, 7, 11, 15], 9)) == [0, 1])
 
     def test_example_2(self):
         """
         Input: nums = [3,2,4], target = 6
         """
         s = Solution()
-        self.assertTrue(s.twoSum([3, 2, 4], 6).sort() == [1, 2])
+        self.assertTrue(sorted(s.twoSum([3, 2, 4], 6)) == [1, 2])
 
     def test_example_3(self):
         """
         Input: nums = [3,3], target = 6 Output: [0,1]
         """
         s = Solution()
-        self.assertTrue(s.twoSum([3, 3], 6).sort() == [0, 1])
+        self.assertTrue(sorted(s.twoSum([3, 3], 6)) == [0, 1])
 
     def test_constraints(self):
         """
