@@ -33,6 +33,13 @@ class TestSolution(unittest.TestCase):
         s = Solution()
         self.assertTrue(sorted(s.twoSum([3, 3], 6)) == [0, 1])
 
+    def test_example_4(self):
+        """
+        Input: nums = [-1,-2,-3,-4,-5], target = -8 Output: [2,4]
+        """
+        s = Solution()
+        self.assertTrue(sorted(s.twoSum([-1,-2,-3,-4,-5], -8)) == [2,4])
+
     def test_constraints(self):
         """
         2 <= nums.length <= 104
