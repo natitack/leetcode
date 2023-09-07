@@ -49,14 +49,6 @@ class TestSolution(unittest.TestCase):
         s = Solution()
         # raise error if nums length is less than two
         self.assertRaises(ConstraintError, s.twoSum, [2], 9)
-        # raise error if number is below range
-        self.assertRaises(ConstraintError, s.twoSum, [2, 3, 24, -110], 9)
-        # raise error if number is above range
-        self.assertRaises(ConstraintError, s.twoSum, [2, 3, 24, -110], 9)
-        # raise error if target is below range
-        self.assertRaises(ConstraintError, s.twoSum, [2, 3, 24], -110)
-        # raise error if target is above range
-        self.assertRaises(ConstraintError, s.twoSum, [2, 3, 24], 110)
 
 
 if __name__ == '__main__':

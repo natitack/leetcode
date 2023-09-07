@@ -12,22 +12,14 @@ class Solution:
 
         # declare constraints
         min_length: int = 2
-        max_length: int = 104
-        min_value: int = -109
-        max_value: int = 109
-        min_target: int = -109
-        max_target: int = 109
 
-        # raise ConstraintError if target is out of bounds
-        if min_target > target or max_target < target:
-            raise ConstraintError
 
         # create pointers marking the beginning and end of the list (largest and smallest numbers)
         smallest_num_index: int = 0
         largest_num_index: int = len(nums)
 
         # raise ConstraintError if length is out of bounds
-        if min_length > largest_num_index or max_length < largest_num_index:
+        if min_length > largest_num_index:
             raise ConstraintError
 
         # resolve off by one error of the index
@@ -38,10 +30,6 @@ class Solution:
 
         # sort the list by second value in the tuple
         sorted_nums.sort(key=lambda x: x[1])
-
-        # raise constraint exeption if target number is out of bounds
-        if sorted_nums[largest_num_index][1] > max_value or sorted_nums[smallest_num_index][1] < min_value:
-            raise ConstraintError
 
         # sum the largest and smallest number. If the sum is greater than the target, decriment the large variable
         # if the sum is lesser than the target, decriment the small  variable
