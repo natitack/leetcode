@@ -18,7 +18,7 @@ class TestSolution(unittest.TestCase):
         Explanation: The answer is "abc", with the length of 3.        
         """
         s = Solution()
-        print(s.longestSubstring('abcabcbb'))
+        print(f"abcabcbb result: {s.longestSubstring('abcabcbb')}")
         self.assertTrue(s.longestSubstring('abcabcbb') == 3)
 
     def test_example_2(self):
@@ -37,6 +37,8 @@ class TestSolution(unittest.TestCase):
         Explanation: The answer is "wke", with the length of 3.
         """
         s = Solution()
+        print(f"abcde result: {s.longestSubstring('pwwkew')}")
+
         self.assertTrue(s.longestSubstring('pwwkew') == 3)
 
     def test_example_4(self):
